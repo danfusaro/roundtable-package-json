@@ -1,34 +1,73 @@
 {
-  "name": "roundtable-package-json",
+  "name": "sample-project",
   "version": "1.0.0",
-  "description": "Navigating your way through the strange world of npm and package.json",
+  "description": "A sample project for updating package.json",
   "main": "index.js",
+  "module": "index.esm.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node index.js",
+    "update-patches": "npm-check-updates -u -t patch && npm install",
+    "update-minor": "npm-check-updates -u -t minor && npm install",
+    "update-major": "npm-check-updates -u -t major && npm install",
+    "browserslist": "npx browserslist"
   },
-  "keywords": [
-    "react",
-    "frontend",
-    "javascript"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
-    "lodash": "^4.17.15",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "4.0.0"
+    "@notionhq/client": "^0.4.11",
+    "node-fetch": "^2.6.6",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-terser": "^2.0.1",
+    "sass": "^1.35.2"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "eslint": "^6.8.0",
-    "prettier": "^1.19.1"
-  }
+    "npm-check-updates": "^12.1.1"
+  },
+  "engines": {
+    "node": ">=10",
+    "browserslist": [
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Safari versions",
+      "last 2 Edge versions"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sample-project.git"
+  },
+  "license": "MIT",
+  "author": "John Doe",
+  "contributors": [
+    "Jane Smith",
+    "Michael Johnson"
+  ],
+  "homepage": "https://github.com/sample-project",
+  "bugs": {
+    "url": "https://github.com/sample-project/issues",
+    "email": "bugs@sample-project.com"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "private": false,
+  "files": [
+    "src/**/*",
+    "dist/**/*",
+    "index.js"
+  ],
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "optionalDependencies": {
+    "lodash": "^4.17.21"
+  },
+  "keywords": [
+    "sample",
+    "project",
+    "package.json",
+    "npm"
+  ]
 }
