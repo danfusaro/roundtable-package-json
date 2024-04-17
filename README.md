@@ -59,10 +59,3 @@ not op_mini all: Exclude Opera Mini
 - **"peerDependencies"**: Dependencies that must be installed by the consumer of the package.
 - **"optionalDependencies"**: Dependencies that are not required for the package to function.
 
-### Exercise
-1. Run `npm install`
-2. Check for vulnerabilities with `npm audit --audit-level=critical`
-3. Use `npx npm-check-updates -u` to update package versions
-4. Rerun `npm install` to update packages
-5. Investigate high vulnerabilities and isolate packages requiring `npm audit fix --force`
-6. Test against these packages to ensure compatibility and address breaking changes.
